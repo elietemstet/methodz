@@ -16,12 +16,13 @@ import {
 } from "@mui/material";
 const useStyles = makeStyles(() => ({
   canvas: {
-    padding: "20px",
-    border: "1px solid black",
-    borderRadius: "5px",
+    padding: "100px",
+    marginTop: "3%",
+    marginLeft: "35%",
+    border: "5px solid orange",
+    width: "30%",
     backgroundColor: "white",
-    width: "100%",
-    height: "100%",
+    height: "300px",
   },
   fieldItem: {
     marginBottom: "10px",
@@ -49,7 +50,7 @@ const Canvas = () => {
 
   const formik = useFormik({
     initialValues: {
-      fieldName: "",
+      fieldName: " ",
       fieldTtpe: "",
       offsetFrom: "",
       offsetTo: "",
@@ -82,6 +83,7 @@ const Canvas = () => {
 
   return (
     <div className={classes.canvas} onClick={() => setOpen(true)}>
+      <h2>Canvas</h2>
       {fields.map((item, index) => (
         <div key={index} className={classes.fieldItem}>
           <Grid container spacing={2}>

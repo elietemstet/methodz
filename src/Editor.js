@@ -4,11 +4,13 @@ import { makeStyles } from "@mui/styles";
 import { Paper, Typography } from "@mui/material";
 const useStyles = makeStyles({
   editor: {
-    padding: "20px",
-    border: "1px solid #ddd",
-    minHeight: "150px",
-    overflow: "auto",
-    fontFamily: "Courier New, monospace",
+    padding: "100px",
+    marginTop: "1%",
+    marginLeft: "35%",
+    border: "5px solid orange",
+    width: "30%",
+    backgroundColor: "white",
+    height: "300px",
   },
 });
 
@@ -18,7 +20,7 @@ const Editor = () => {
 
   return (
     <Paper className={classes.editor} elevation={3}>
-      <Typography variant="h6">Editor</Typography>
+      <h2>Editor</h2>
       <Typography variant="body1">{JSON.stringify(fields, null, 2)}</Typography>
     </Paper>
   );
